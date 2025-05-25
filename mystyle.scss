@@ -1,0 +1,149 @@
+@use "base" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+}
+
+.toolbar {
+  display: flex;
+  height: 50px;
+
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.page-container {
+  display: flex;
+  flex-direction: row;
+
+  height: 100vh;
+}
+
+.page-title {
+  display: flex;
+  height: 50px;
+  background-color: $primary-color;
+  align-items: center;
+  justify-content: start;
+  padding-left: 20px;
+  font-size: 24px;
+  color: $font-color;
+}
+.menu-title {
+  display: flex;
+
+  padding-left: 20px;
+  font-size: 24px;
+  color: $font-color;
+}
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 200px;
+  height: 100vh;
+
+  background-color: $secondary-color;
+  padding: 10px;
+
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fix;
+  }
+
+  li {
+    border: 1px solid gray;
+    list-style: none;
+    background-color: $menu-color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 50px;
+  justify-content: center;
+  padding: 32px;
+}
+.card-item {
+  border: 0.5px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 250px;
+  height: 170px;
+}
+footer {
+  display: flex;
+  align-items: end;
+  height: 50px;
+  margin-left: 12px;
+  background-color: $menu-color;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: none;
+  }
+  .page-container {
+    flex-direction: row;
+  }
+
+  .menu-container {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    border: none;
+    .card-item {
+      width: 100%;
+      border: none;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      width: 20%;
+      text-align: center;
+    }
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .card-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    align-items: end;
+  }
+}
