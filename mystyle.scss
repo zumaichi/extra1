@@ -15,10 +15,12 @@ body {
   padding: 0 20px;
 }
 .page-container {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
-
+  position: sticky;
   height: 100vh;
+  width: 100%;
 }
 
 .page-title {
@@ -33,6 +35,7 @@ body {
 }
 .menu-title {
   display: flex;
+  width: 100%;
 
   padding-left: 20px;
   font-size: 24px;
@@ -52,7 +55,6 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    position: fix;
   }
 
   li {
@@ -132,6 +134,8 @@ footer {
   .list {
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
+
     gap: 0px;
   }
 
@@ -140,10 +144,9 @@ footer {
     margin-bottom: 20px;
   }
   .footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     height: 50px;
-    align-items: end;
+
+    bottom: 0;
   }
 }
