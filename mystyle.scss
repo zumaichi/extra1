@@ -15,8 +15,9 @@ body {
   padding: 0 20px;
 }
 .page-container {
-  overflow: hidden;
+  
   display: flex;
+  overflow: hidden;
   flex-direction: row;
   position: sticky;
   height: 100vh;
@@ -55,6 +56,9 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
   }
 
   li {
@@ -134,7 +138,7 @@ footer {
   .list {
     flex-direction: column;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     gap: 0px;
   }
