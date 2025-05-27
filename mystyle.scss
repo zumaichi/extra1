@@ -121,16 +121,24 @@ footer {
   .toolbar {
     display: none;
   }
+  .page-title {
+    width: 100vh;
+    height: 50px;
+  }
 
   .page-container {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .menu-container {
+    width: 768px;
+    height: auto;
+
     ul {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      gap: 10px;
     }
     li {
       width: 20%;
@@ -140,7 +148,6 @@ footer {
 
   .list {
     display: flex;
-    flex-direction: column;
   }
 
   .card-item {
