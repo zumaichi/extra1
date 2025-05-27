@@ -13,7 +13,14 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+
+  .barbu {
+    input:hover {
+      box-shadow: 5px 5px 5px $hover-color;
+    }
+  }
 }
+
 .page-container {
   display: flex;
   overflow: hidden;
@@ -44,7 +51,7 @@ body {
 .menu-container {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+
   width: 200px;
   height: 100vh;
 
@@ -101,7 +108,6 @@ body {
 }
 footer {
   display: flex;
-  align-items: end;
   height: 50px;
   margin-left: 12px;
   background-color: $menu-color;
@@ -109,29 +115,24 @@ footer {
 }
 
 @media (max-width: 768px) {
-  header {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+  }
+  .toolbar {
     display: none;
   }
+
   .page-container {
     flex-direction: row;
   }
 
   .menu-container {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    border: none;
-    .card-item {
-      width: 100%;
-      border: none;
-    }
     ul {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-
-      padding: 0;
-      margin: 0;
     }
     li {
       width: 20%;
@@ -140,20 +141,23 @@ footer {
   }
 
   .list {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0px;
+
+    padding: 0;
+    margin: 0;
+    border: 0;
   }
 
   .card-item {
     width: 90%;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
   .footer {
-    width: 100%;
+    display: flex;
     height: 50px;
-
-    bottom: 0;
+    margin-left: 12px;
+    background-color: $menu-color;
+    align-items: center;
   }
 }
