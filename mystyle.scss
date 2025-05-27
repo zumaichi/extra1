@@ -13,6 +13,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+
 }
 .page-container {
   
@@ -48,6 +49,7 @@ body {
   box-sizing: border-box;
   width: 200px;
   height: 100vh;
+  
 
   background-color: $secondary-color;
   padding: 10px;
@@ -56,19 +58,21 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    position: sticky;
     display: flex;
     flex-direction: column;
-    position: sticky;
+    
   }
 
   li {
     border: 1px solid gray;
     list-style: none;
     background-color: $menu-color;
-    cursor: pointer;
+    
 
     &:hover {
       background-color: $hover-color;
+      cursor: pointer;
     }
   }
 }
@@ -81,7 +85,10 @@ body {
   gap: 50px;
   justify-content: center;
   padding: 32px;
-}
+  
+  }
+
+
 .card-item {
   border: 0.5px solid black;
   background-color: white;
@@ -93,6 +100,11 @@ body {
   border-radius: 5px;
   width: 250px;
   height: 170px;
+
+   &:hover {
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 3);
+      cursor: pointer;
+    }
 }
 footer {
   display: flex;
@@ -112,7 +124,6 @@ footer {
   }
 
   .menu-container {
-    position: fixed;
     width: 100%;
     height: auto;
     flex-direction: column;
@@ -139,8 +150,10 @@ footer {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-
     gap: 0px;
+    &:hover {
+      background-color: $hover-color;
+    }
   }
 
   .card-item {
