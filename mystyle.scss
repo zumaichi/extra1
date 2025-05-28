@@ -128,7 +128,7 @@ footer {
   .page-title {
     width: 100%;
   }
-  nav {
+  .nav {
     position: sticky;
     top: 0;
     width: 100%;
@@ -161,6 +161,7 @@ footer {
     li {
       padding: 0px 10px;
       text-align: center;
+      padding: 1%;
     }
   }
 
@@ -168,6 +169,7 @@ footer {
     display: flex;
     width: 100%;
     justify-content: flex-start;
+    gap: 5px;
   }
 
   .card-item {
@@ -176,7 +178,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: start;
-    gap: 10px;
+    padding: 10%;
+    gap: 20px;
     &:hover {
       box-shadow: none;
     }
