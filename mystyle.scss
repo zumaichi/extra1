@@ -24,7 +24,7 @@ body {
 main {
   flex: 1;
   width: auto;
-  height: 100vh;
+  min-width: 100vh;
 }
 
 .page-container {
